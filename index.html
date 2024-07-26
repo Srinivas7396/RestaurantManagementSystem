@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>Foooodie</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+  <div class="background-image">
+  
+   <div class="navbar">
+   <ul>
+   <li><a href="index.html">Foodie</a></li>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="menu.html">Menu</a></li>
+  <li><a href="booktable.html">BookTable</a></li>
+  <li><a href="about.html">About</a></li>
+  
+</ul>
+   </div>
+   <div class="moving-text"><h2>Welcome to FOODIE </h2></div>
+   </div>
+   
+   <div class="footer">
+        <div class="footer-section">
+            <h2>Contact Us</h2>
+            <p>Location</p>
+            <p>Call +01 1234567890</p>
+            <p>demo@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h2>Foodie</h2>
+            <p>Necessary, making this the first true generator on the Internet.</p>
+           
+        </div>
+        <div class="footer-section">
+            <h2>Opening Hours</h2>
+            <p>Everyday 10.00 AM - 10.00 PM</p>
+        </div>
+    </div>
+</body>
+
+<script>
+
+setInterval(function() {
+    var textElement = document.querySelector('.moving-text');
+    textElement.classList.toggle('bigger-text');
+    textElement.classList.toggle('yellow-color');
+}, 5000); 
+
+</script>
+</html>

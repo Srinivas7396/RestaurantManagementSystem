@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #131111;
+    text-align:center;
+  }
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this */
+    padding: 0 20px; /* Add padding to the sides */
+    box-sizing: border-box;
+}
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            display: inline-block;
+            border-radius:5px;
+        }
+
+        .navbar a:hover {
+            background-color: #eef836;
+            color: black;
+            
+        }
+
+        .navbar a.active {
+            background-color: #eef836;
+            color: black;
+        }
+
+
+
+  .row {
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));;
+    
+  
+  }
+
+  .card {
+  width: 79%;
+  margin-bottom: 50px;
+  background-color: rgba(60, 57, 57, 0.647);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(254, 211, 39, 0.2);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  max-height:100%;
+}
+
+
+
+ .card img {
+            width: 100%;
+            height: auto;
+            border-radius:8px;
+        }
+.container {
+  padding-top:0px;
+  padding-left:20px;
+  padding-bottom:20px;
+  color: white;
+  height: 60%;
+  overflow: hidden; 
+  display:inline-block;
+  text-align:center;
+}
+
+.card:hover {
+  box-shadow: 0 0 8px 4px #f1f113, 0 0 16px 8px #f1f113;
+  transform: scale(1.03); 
+  transition: transform 0.4s ease; 
+}
+
+
+  h2 {
+  text-align: center;
+  color: #15fa4e;
+  margin-top: 60px; /* Add some extra top margin to push the headings below the fixed navbar */
+}
+.all{
+ display:inline-block;
+margin-left:10%;
+}
+
+#cartCount{
+	color:red;
+	font-size:20px;
+} 
+
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #00ff40;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+ .quantity-controls {
+            display: flex;
+            
+            align-items: center;
+            justify-content:center;
+           
+        }
+
+        .quantity-controls button {
+            padding: 10px;
+            border: none;
+            background-color: rgb(237, 197, 33);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+
+
+        .quantity-controls .plus {
+            border-radius: 0px 5px 5px 0px;
+            
+        }
+
+        .quantity-controls .minus {
+            border-radius: 5px 0px 0px 5px;
+            
+        }
+
+        .quantity-controls input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+            margin-top:10px;
+            background-color:rgba(181, 226, 132, 0.866);
+        }
+.add{
+display:inline-block;
+	    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(42, 167, 7, 0.866);
+    color: white;
+    font-weight: bold;
+}
+.cancel{
+	
+	margin-right:10px !important;
+	    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:rgba(212, 51, 51, 0.866);
+    color:silver;
+    font-weight: bold;
+}
+
+.spaced-element img{
+	height:45px;
+	width:45px;
+}
+
+
+
+.cart-icon.rotate {
+    animation: rotate 1s ease;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.item-price{
+	
+	
+	font-weight:bold;
+	font-size:20px;
+}
+.modal {
+    display: none; /* Ensure the modal is hidden by default */
+    position: fixed;
+    z-index: 1; /* Ensure it's above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    transition: opacity 0.3s ease; /* Optional: smooth show/hide transition */
+       justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color:#4a4ad6;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ca0202;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Additional styling for quantity list */
+#quantityList {
+    margin: 20px 0;
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 200px; /* Set maximum height before scrolling */
+    padding: 10px; /* Optional: add padding for better appearance */
+    border: 1px solid #ccc; /* Optional: add a border for visibility */
+    border-radius: 5px; /* Optional: add border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+    background-color: #ffff00; /* Optional: background color */
+}

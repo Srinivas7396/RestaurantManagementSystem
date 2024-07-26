@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+body
+{
+	background-image:url('https://st.depositphotos.com/22341038/59504/i/600/depositphotos_595049600-stock-photo-different-cooking-ingredients-spices-wooden.jpg');
+	 background-size: cover;
+}
+.login , .signup
+{
+    margin-top:100px;
+    margin-left: 130px;
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+    padding: 50px; 
+    border-radius: 10px; 
+    width:200px;
+    z-index: 1;
+    position: relative;
+    border: 2px solid white;
+}
+
+.login input[type="text"],
+.login input[type="password"] ,
+.signup input[type="text"],
+.signup input[type="password"],
+ .signup input[type="email"]{
+    border: none; 
+    background: transparent; 
+    outline: none;
+    padding: 5px; 
+    margin-bottom: 10px; 
+    width: 100%; 
+    height:30px;
+    font-size:20px;
+    color:black;
+}
+
+.login input[type="submit"],.signup input[type="submit"] ,
+.login button,.signup button {
+    width: 100%; 
+    border: none;
+    background-color: yellow; 
+    color: black; 
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:20px;
+}
+
+
+
+
+
+ 

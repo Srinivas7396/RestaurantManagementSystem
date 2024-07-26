@@ -1,0 +1,95 @@
+@charset "UTF-8";
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url('hero-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+ 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float:left;
+  padding:0 50px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:20px
+}
+.navbar {
+    width: 100%; 
+}
+
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+	color:#00ff40;
+	font-size:30px;
+}
+
+.navbar ul li:first-child  a {
+    
+    color: orange;
+    font-size: 35px; 
+     font-family: 'Dancing Script', cursive;
+}
+
+
+     .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 50px; 
+}
+
+.footer p {
+    font-size: 18px; 
+}
+
+
+/*text will become bigger in home page */
+
+  .moving-text {
+        position: absolute;
+        z-index:1;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: white;
+        transition: font-size 0.5s, color 0.5s; /* Smooth transition for font size and color changes */
+    }
+
+    .bigger-text {
+        font-size: 36px; /* Increase font size */
+    }
+
+    .yellow-color {
+        color: yellow; /* Change text color to yellow */
+    }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<link rel="stylesheet" href="loginsignupstyle.css">
+<body>
+
+
+<div class="login" id="loginForm">
+<form action="login" method="post">
+<input type="text" name="lusername" placeholder="username" autocomplete="off" required><br><br>
+<input type="text" name="lpassword" placeholder="password" autocomplete="off" required><br><br>
+<input type="submit" value="login">
+<br><br>
+<button type="button" onclick="showSignupForm()" >Create Account</button>
+</form>
+</div>
+
+
+ <div class="signup" id="signupForm" style="display: none;">
+        <form action="signin" method="post">
+         <input type="email" name="email" placeholder="Email" autocomplete="off" required><br><br>
+            <input type="text" name="susername" placeholder="Username" autocomplete="off" required><br><br>
+            <input type="password" name="spassword" placeholder="Password" autocomplete="off" required><br><br>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" autocomplete="off" required><br><br>
+           
+            <input type="submit" value="Sign Up">
+             <br><br>
+            <button type="button" onclick="showLoginForm()">Back to Login</button>
+        </form>
+    </div>
+
+  <script>
+  function showSignupForm() {
+      const signupForm = document.getElementById("signupForm");
+      const loginForm = document.getElementById("loginForm");
+      signupForm.style.display = "block";
+      loginForm.style.display = "none";
+  }
+
+  function showLoginForm() {
+      const signupForm = document.getElementById("signupForm");
+      const loginForm = document.getElementById("loginForm");
+      signupForm.style.display = "none";
+      loginForm.style.display = "block";
+  }
+    </script>
+
+</body>
+</html>

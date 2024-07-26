@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<link rel="stylesheet" type="text/css" href="menustyle.css">
+
+</head>
+<body>
+
+ <div class="navbar">
+        <div class="navbar-links">
+            <a href="#fastfood" onclick="setActive(this)">Fast Food</a>
+            <a href="#tiffin" onclick="setActive(this)">Breakfast Items</a>
+            <a href="#veg" onclick="setActive(this)">Veg Food</a>
+            <a href="#nonveg" onclick="setActive(this)">Non-Veg Food</a>
+            <a href="#sweet" onclick="setActive(this)">Sweet</a>
+        </div>
+        <span class="spaced-element" onclick="displayQuantities()">
+            <img class="cart-icon" src="foodwithcutlery.png"  alt="food with cutlery" />
+            <b><span id="cartCount"><b>0</b></span></b>
+        </span>
+</div>
+
+<div class="all">
+  <div id="fastfood">
+  <br>
+  <h2 >FastFood</h2>
+</div>
+<div class="row">
+  
+  <div class="card">
+    <img src="https://pngimg.com/uploads/noodle/noodle_PNG15.png" alt="Fast Food 1">
+    <div class="container">
+              <h4>Fried Noodles</h4>
+        <p class="item-price">₹100.00</p>
+       <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('ff1', -1)">-</button>
+        <input type="number" class="quantity-input" id="ff1" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('ff1', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('ff1','Fried Noodles',100)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('ff1')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://c4.wallpaperflare.com/wallpaper/806/830/571/pizza-piece-cheese-fast-food-wallpaper-preview.jpg" alt="Fast Food 2">
+    <div class="container">
+      <h4>Cheese Pizza</h4>
+      <p class="item-price">₹180.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('ff2', -1)">-</button>
+        <input type="number" class="quantity-input" id="ff2" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('ff2', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('ff2','Cheese Pizza',180)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('ff2')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://s1.1zoom.me/big0/134/French_fries_Fast_food_561492_1280x853.jpg" alt="Fast Food 3">
+    <div class="container">
+    <h4>French Fries</h4>
+      <p class="item-price">₹100.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('ff3', -1)">-</button>
+        <input type="number" class="quantity-input" id="ff3" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('ff3', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('ff3','French Fries',100)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('ff3')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1208081427/photo/veg-manchurian-very-popular-chinese-snack-popular-in-india.jpg?s=612x612&w=0&k=20&c=C_Lsxts8SAyGTaMwiAx_S2PEaRzM0V1r93S6FeysW8I=" alt="Fast Food 3">
+    <div class="container">
+      <h4>Veg Manchuria</h4>
+      <p class="item-price">₹120.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('ff4', -1)">-</button>
+        <input type="number" class="quantity-input" id="ff4" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('ff4', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('ff4','Veg Manchuria',120)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('ff4')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1158142444/photo/crispy-chicken-drumsticks-grilled-kfc-style-with-crackers-takeaway.webp?b=1&s=170667a&w=0&k=20&c=YTMQkTfFtRtJ2QKZ_SWL4eqcz8zVDnoed4bdIDubxFc=" alt="Fast Food 3">
+    <div class="container">
+            <h4>Crispy Chicken Drumsticks</h4>
+      <p class="item-price">₹300.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('ff5', -1)">-</button>
+        <input type="number" class="quantity-input" id="ff5" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('ff5', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('ff5','Crispy Chicken Drumsticks',300)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('ff5')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://e0.pxfuel.com/wallpapers/932/946/desktop-wallpaper-fast-food-background-meal.jpg" alt="Fast Food 3">
+    <div class="container">
+         <h4>Chicken Burger</h4>
+      <p class="item-price">₹80.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('ff6', -1)">-</button>
+        <input type="number" class="quantity-input" id="ff6" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('ff6', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('ff6','Chicken Burger',80)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('ff6')">Cancel</button>
+    
+    </div>
+  </div>
+
+
+</div>
+
+ <div id="tiffin">
+  <br>
+ <h2 >Breakfast Items</h2>
+</div>
+
+<br>
+<div class="row">
+  <div class="card">
+    <img src="https://st2.depositphotos.com/44388702/44219/i/600/depositphotos_442199686-stock-photo-homemade-dosa-dhosa-masala-plain.jpg" alt="Tiffin Breakfast 1">
+    <div class="container">
+      <h4>Masala Dosa</h4>
+      <p class="item-price">₹60.00</p>
+      
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('bf1', -1)">-</button>
+        <input type="number" class="quantity-input" id="bf1" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('bf1', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('bf1','Masala Dosa',60)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('bf1')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://st.depositphotos.com/1491432/2659/i/600/depositphotos_26596153-stock-photo-sambar-vada.jpg" alt="Tiffin Breakfast 2">
+    <div class="container">
+      <h4>Idly</h4>
+      <p class="item-price">₹40.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('bf2', -1)">-</button>
+        <input type="number" class="quantity-input" id="bf2" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('bf2', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('bf2','Idly',40)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('bf2')">Cancel</button>
+    
+  </div>
+  </div>
+  <div class="card">
+    <img src="https://st.depositphotos.com/1491432/2651/i/380/depositphotos_26512999-stock-photo-sambar-vada-on-banana-leaf.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Sambar Wada</h4>
+      <p class="item-price">₹50.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('bf3', -1)">-</button>
+        <input type="number" class="quantity-input" id="bf3" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('bf3', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('bf3','Sambar Wada',50)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('bf3')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://st3.depositphotos.com/1491432/16182/i/600/depositphotos_161823124-stock-photo-south-indian-dish-onion-uthappams.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Onion Uthappam</h4>
+      <p class="item-price">₹65.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('bf4', -1)">-</button>
+        <input type="number" class="quantity-input" id="bf4" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('bf4', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('bf4','Uthappam',65)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('bf4')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://st3.depositphotos.com/19960896/35534/i/600/depositphotos_355348506-stock-photo-aloo-puri-potato-curry-fried.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Aloo Puri</h4>
+      <p class="item-price">₹80.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('bf5', -1)">-</button>
+        <input type="number" class="quantity-input" id="bf5" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('bf5', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('bf5','Aloo Puri',80)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('bf5')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://st2.depositphotos.com/1899781/11684/i/600/depositphotos_116842296-stock-photo-indian-snack-mangalore-bajji.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+  <h4>Mangalore Bajji</h4>
+      <p class="item-price">₹70.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('bf6', -1)">-</button>
+        <input type="number" class="quantity-input" id="bf6" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('bf6', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('bf6','Mangalore Bajji',70)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('bf6')">Cancel</button>
+    
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+ <div id="veg">
+  <br>
+<h2 >Veg Food</h2>
+</div>
+
+
+
+<div class="row">
+  <div class="card">
+    <img src="https://st2.depositphotos.com/34890364/46241/i/600/depositphotos_462411336-stock-photo-indian-palak-paneer.jpg" alt="Tiffin Breakfast 1">
+    <div class="container">
+      <h4>Palak Paneer</h4>
+      <p class="item-price">₹120.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('vf1', -1)">-</button>
+        <input type="number" class="quantity-input" id="vf1" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('vf1', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('vf1','Palak Paneer',120)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('vf1')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://st2.depositphotos.com/2894907/47456/i/600/depositphotos_474562998-stock-photo-yellow-rice-turmeric-rice-wih.jpg" alt="Tiffin Breakfast 2">
+    <div class="container">
+      <h4>Pulihora</h4>
+      <p class="item-price">₹70.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('vf2', -1)">-</button>
+        <input type="number" class="quantity-input" id="vf2" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('vf2', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('vf2','Pulihora',70)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('vf2')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://st3.depositphotos.com/5653638/15854/i/600/depositphotos_158549332-stock-photo-indian-popular-food-dal-fry.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Dal Rice</h4>
+      <p class="item-price">₹80.00</p>
+       <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('vf3', -1)">-</button>
+        <input type="number" class="quantity-input" id="vf3" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('vf3', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('vf3','Dal Rice',80)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('vf3')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://st.depositphotos.com/1774890/3480/i/600/depositphotos_34802991-stock-photo-tomato-rice-with-rocket.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Tomato Rice</h4>
+      <p class="item-price">₹95.00</p>
+       <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('vf4', -1)">-</button>
+        <input type="number" class="quantity-input" id="vf4" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('vf4', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('vf4','Tomato Rice',95)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('vf4')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://vismaifood.com/storage/app/uploads/public/b05/140/e0e/thumb__700_0_0_0_auto.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Pudina Rice</h4>
+      <p class="item-price">₹80.00</p>
+       <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('vf5', -1)">-</button>
+        <input type="number" class="quantity-input" id="vf5" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('vf5', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('vf5','Pudina Rice',80)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('vf5')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2013/03/veg-pulao-280x280.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Veg Pulao</h4>
+      <p class="item-price">₹80.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('vf6', -1)">-</button>
+        <input type="number" class="quantity-input" id="vf6" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('vf6', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('vf6','Veg Pulao',80)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('vf6')">Cancel</button>
+    
+    </div>
+  </div>
+
+</div>
+
+ <div id="nonveg">
+  <br>
+ <h2 >Non Veg</h2>
+</div>
+
+
+<div class="row">
+  <div class="card">
+    <img src="https://st4.depositphotos.com/18645588/25027/i/600/depositphotos_250270036-stock-photo-chicken-biryani-highly-delicious-yummy.jpg" alt="Tiffin Breakfast 1">
+    <div class="container">
+      <h4>Chicken Biryani</h4>
+      <p class="item-price">₹350.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('nv1', -1)">-</button>
+        <input type="number" class="quantity-input" id="nv1" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('nv1', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('nv1','Chicken Biryani',350)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('nv1')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://e0.pxfuel.com/wallpapers/979/76/desktop-wallpaper-the-best-eid-dishes-from-around-the-world-ferns-n-petals-mutton-biryani-thumbnail.jpg" alt="Tiffin Breakfast 2">
+    <div class="container">
+      <h4>Mutton Biryani</h4>
+      <p class="item-price">₹450.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('nv2', -1)">-</button>
+        <input type="number" class="quantity-input" id="nv2" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('nv2', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('nv2','Mutton Biryani',450)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('nv2')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/7dLE0oraTF0/maxresdefault.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Mutton Biryani With Leg Bones</h4>
+      <p class="item-price">₹500.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('nv3', -1)">-</button>
+        <input type="number" class="quantity-input" id="nv3" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('nv3', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('nv3','Mutton Biryani With Leg Bones',500)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('nv3')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://img-global.cpcdn.com/recipes/8cb662c089479653/1200x630cq70/photo.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Chicken Fried Rice</h4>
+      <p class="item-price">₹160.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('nv4', -1)">-</button>
+        <input type="number" class="quantity-input" id="nv4" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('nv4', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('nv4','Chicken Fried Rice',160)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('nv4')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/prbalneuig1irznyyh4v" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Matka Chicken</h4>
+      <p class="item-price">₹350.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('nv5', -1)">-</button>
+        <input type="number" class="quantity-input" id="nv5" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('nv5', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('nv5','Matka Chicken',350)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('nv5')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://img.taste.com.au/SMCVKSjB/taste/2018/08/creamy-lemon-salmon-tray-bake-139865-2.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+      <h4>Creamy Lemon Salmon Tray Bake</h4>
+      <p class="item-price">₹600.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('nv6', -1)">-</button>
+        <input type="number" class="quantity-input" id="nv6" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('nv6', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('nv6','Creamy Lemon Salmon Tray Bake',600)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('nv6')">Cancel</button>
+    
+    </div>
+  </div>
+
+</div>
+
+ <div id="sweet">
+  <br>
+  <h2 >Sweets and Desert</h2>
+</div>
+
+
+<div class="row">
+  <div class="card">
+    <img src="https://as1.ftcdn.net/v2/jpg/05/00/29/56/1000_F_500295650_gOUvgp4jPiWPa3j2KeiFk5tLVBR4LclM.jpg" alt="Tiffin Breakfast 1">
+    <div class="container">
+      <h4>Khadhu Ka Kheer </h4>
+      <p class="item-price">₹200.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('sd1', -1)">-</button>
+        <input type="number" class="quantity-input" id="sd1" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('sd1', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('sd1','Khadhu Ka Kheer',200)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('sd1')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://aartimadan.com/wp-content/uploads/2019/05/IMG_5840-1.jpg" alt="Tiffin Breakfast 2">
+    <div class="container">
+      <h4>Sheer Khurma</h4>
+      <p class="item-price">₹210.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('sd2', -1)">-</button>
+        <input type="number" class="quantity-input" id="sd2" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('sd2', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('sd2','Sheer Khurma',210)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('sd2')">Cancel</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img src="https://images.news18.com/ibnkhabar/uploads/2020/12/gulab-jamun.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+     <h4>Gulab Jamun</h4>
+      <p class="item-price">₹50.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('sd3', -1)">-</button>
+        <input type="number" class="quantity-input" id="sd3" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('sd3', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('sd3','Gulab Jamun',50)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('sd3')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/36/1c/3f/361c3fbddc9be07e909efa403b1e5a92.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+     <h4>Kaju Kheer</h4>
+      <p class="item-price">₹120.00</p>
+       <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('sd4', -1)">-</button>
+        <input type="number" class="quantity-input" id="sd4" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('sd4', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('sd4','Kaju Kheer',120)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('sd4')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://www.nuaodisha.com/Receipe/Double-ka-Meetha-1-Double-ka-meetha.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+       <h4>Double Ka Meetha</h4>
+      <p class="item-price">₹150.00</p>
+        <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('sd5', -1)">-</button>
+        <input type="number" class="quantity-input" id="sd5" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('sd5', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('sd5','Double Ka Meetha',150)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('sd5')">Cancel</button>
+    
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://i.ytimg.com/vi/sHaIdicZ8eQ/maxresdefault.jpg" alt="Tiffin Breakfast 3">
+    <div class="container">
+       <h4>Mothi Chuur Laddu</h4>
+      <p class="item-price">₹125.00</p>
+       <div class="quantity-controls">           
+        <button class="minus" onclick="changeQuantity('sd6', -1)">-</button>
+        <input type="number" class="quantity-input" id="sd6" name="quantity" min="0" value="0" readonly>
+        <button class="plus" onclick="changeQuantity('sd6', 1)">+</button>
+        </div> 
+        <button class="add" onclick="addToOrders('sd6','Mothi Chuur Laddu',125)">&nbsp;&nbsp;Add&nbsp;&nbsp;</button>
+        <button class="cancel" onclick="cancelItem('sd6')">Cancel</button>
+    
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+<audio id="button-sound" src="buttonsound.mp3" preload="auto"></audio>
+<audio id="kichiksound" src="kichiksound.mp3" preload="auto"></audio>
+
+
+  <!-- Modal for order summary -->
+  <div id="popupModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Finalize your order and continue to payment?</h2>
+          <div id="quantityList">No items</div> <!-- Container for displaying quantities -->
+          <h3>Total Amount: <span id="totalAmount">₹0.00</span></h3>
+          <button id="continueButton" class="btn" onclick="continueAction()">Continue</button>
+      </div>
+  </div>
+
+  <audio id="button-sound" src="buttonsound.mp3" preload="auto"></audio>
+  <audio id="kichiksound" src="kichiksound.mp3" preload="auto"></audio>
+
+  <script>
+      // Dictionary to store quantities dynamically
+      let quantities = {};
+      let cartCount = 0;
+
+      // Function to change quantity
+      function changeQuantity(inputId, delta) {
+          playPlusMinusSound();
+          let quantityInput = document.getElementById(inputId);
+          let currentQuantity = parseInt(quantityInput.value);
+          let newQuantity = currentQuantity + delta;
+
+          if (newQuantity < 0) newQuantity = 0;
+          if (newQuantity > 10) newQuantity = 10; // Optional: max limit
+
+          quantityInput.value = newQuantity;
+
+          // Optional alert for max limit
+          if (newQuantity === 10) {
+              alert("Maximum quantity reached!");
+          }
+      }
+
+      // Function to add to orders
+      function addToOrders(inputId, itemName, itemPrice) {
+          playSound(); // Play sound when button is pressed
+          let quantityInput = document.getElementById(inputId);
+          let currentQuantity = parseInt(quantityInput.value);
+
+          if (!quantities[inputId]) {
+              quantities[inputId] = { name: itemName, price: itemPrice, quantity: 0 };
+          }
+
+          quantities[inputId].quantity += currentQuantity; // Update quantity in dictionary
+
+          // Store updated quantities in local storage
+          localStorage.setItem('quantities', JSON.stringify(quantities));
+
+          // Update cart count
+          cartCount += currentQuantity;
+          document.getElementById('cartCount').innerText = cartCount;
+
+          // Make cart icon rotate
+          let cartIcon = document.querySelector('.cart-icon');
+          cartIcon.classList.add('rotate');
+          setTimeout(() => {
+              cartIcon.classList.remove('rotate');
+          }, 1000); // Remove rotate class after 1 second
+
+          // Debug: check quantities in console
+          console.log('Quantities:', quantities);
+          console.log('Cart Count:', cartCount);
+      }
+
+      // Function to cancel an item
+      function cancelItem(inputId) {
+          if (quantities[inputId]) {
+              // Update cart count
+              cartCount -= quantities[inputId].quantity;
+
+              // Remove the item from quantities
+              delete quantities[inputId];
+
+              // Update local storage
+              localStorage.setItem('quantities', JSON.stringify(quantities));
+
+              // Update cart count in UI
+              document.getElementById('cartCount').innerText = cartCount;
+
+              // Reset the input field to 0 after cancellation
+              document.getElementById(inputId).value = 0;
+
+              // Debug: confirm item removal
+              console.log(`Removed ${inputId}. Updated Quantities:`, quantities);
+          }
+      }
+
+      // Preload the audio on page load
+      window.addEventListener('load', () => {
+          const buttonSound = document.getElementById('button-sound');
+          buttonSound.load();
+
+          const plusMinusSound = document.getElementById('kichiksound');
+          plusMinusSound.load();
+
+          // Clear local storage when the page loads
+          localStorage.removeItem('quantities');
+          localStorage.removeItem('totalAmount');
+      });
+
+      // Function to play sound
+      function playSound() {
+          const sound = document.getElementById('button-sound');
+          sound.play();
+      }
+
+      function playPlusMinusSound() {
+          const sound = document.getElementById('kichiksound');
+          sound.play();
+      }
+
+      // Function to open the modal
+      function openModal() {
+          const modal = document.getElementById('popupModal');
+          modal.style.display = 'flex'; // Use 'flex' to match the CSS for centering
+      }
+
+      // Function to close the modal
+      function closeModal() {
+          const modal = document.getElementById('popupModal');
+          modal.style.display = 'none';
+      }
+
+      // Function to display quantities inside the modal
+      function displayQuantities() {
+          let output = '';
+          let totalAmount = 0;
+          for (const [key, item] of Object.entries(quantities)) {
+              const itemTotal = item.quantity * item.price;
+              totalAmount += itemTotal;
+              output += `<p>${item.name}: ${item.quantity} x ₹${item.price.toFixed(2)} = ₹${itemTotal.toFixed(2)}</p>`;
+          }
+
+          const quantityList = document.getElementById('quantityList');
+          quantityList.innerHTML = output; // Insert the generated HTML into the modal
+
+          document.getElementById('totalAmount').innerText = `₹${totalAmount.toFixed(2)}`; // Update total amount
+
+          openModal(); // Open the modal after setting the content
+      }
+
+      // Close the modal when clicking outside the modal-content
+      window.onclick = function(event) {
+          const modal = document.getElementById('popupModal');
+          if (event.target === modal) {
+              closeModal();
+          }
+      }
+
+      // Listen for Escape key to close modal
+      document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+              closeModal();
+          }
+      });
+
+   // Function to continue and save data to the database
+      function continueAction() {
+          // Retrieve the quantities from local storage
+          const quantities = JSON.parse(localStorage.getItem('quantities')) || {};
+          const totalAmount = parseFloat(document.getElementById('totalAmount').innerText.replace('₹', '')) || 0;
+
+          // Check if the quantities object is empty
+          if (Object.keys(quantities).length === 0) {
+              alert("Please select your meal before continuing.");
+              return; // Stop further execution
+          }
+
+          // Prepare data for sending
+          const orderData = {
+              quantities: quantities,
+              totalAmount: totalAmount
+          };
+
+          // Debug: Print order data
+          console.log('Order Data:', orderData);
+
+          // Send AJAX request to the servlet
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', '/ProcessOrderServlet1', true); // Correct context path
+
+          xhr.setRequestHeader('Content-Type', 'application/json');
+
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState === XMLHttpRequest.DONE) {
+                  if (xhr.status === 200) {
+                      alert('Order processed successfully!');
+                      // Clear local storage or reset order as needed
+                      localStorage.removeItem('quantities');
+                      localStorage.removeItem('totalAmount');
+                      // Optionally redirect to a success page or display confirmation
+                  } else {
+                      alert('Error processing order: ' + xhr.responseText);
+                  }
+              }
+          };
+
+          // Send the JSON string of order data
+          xhr.send(JSON.stringify(orderData));
+      }
+
+      // Add event listener to the continue button
+      document.getElementById('continueButton').addEventListener('click', continueAction);
+
+</script>
+</body>
+</html>
+
+
